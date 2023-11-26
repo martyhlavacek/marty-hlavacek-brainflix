@@ -2,23 +2,32 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "AvenirNextLTPro", sans-serif;
-  //   border: 1px solid red;
-}
-
 .video {
   margin: 0rem;
 
+  &__inline-player-container {
+    margin-top: 1rem;
+    background-color: $brainflix-black;
+  }
+
   &__inline-player {
-    margin: 1rem 0 0 0;
     width: -webkit-fill-available;
+    aspect-ratio: 2;
+    object-fit: cover;
+    @include tablet {
+      margin: 0 2rem 0 2rem;
+    }
+    @include desktop {
+      margin: 0rem 15rem 0 15rem;
+    }
   }
   &__main-text {
     margin: 1rem;
+    line-height: 2rem;
+    @include tablet {
+      margin: 2rem 2rem 0 2rem;
+      font-size: xx-large;
+    }
   }
   &__data-container {
     display: flex;
@@ -27,6 +36,15 @@
     border-top: 1px solid $mercury;
     border-bottom: 1px solid $mercury;
     margin: 1rem;
+    @include tablet {
+      margin: 0 2rem 0 2rem;
+      border-top: none;
+    }
+    @include desktop {
+      border-bottom: 1px solid $mercury;
+      padding-right: 2rem;
+      margin: 0 0 0 2rem;
+    }
   }
 
   &__credits-container {
@@ -36,6 +54,11 @@
     gap: 0rem;
     width: fit-content;
     justify-content: space-between;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1rem;
+    }
   }
 
   &__metrics-container {
@@ -45,6 +68,12 @@
     gap: 0.5rem;
     width: fit-content;
     justify-content: right;
+    @include tablet {
+      margin-top: auto;
+      width: 14rem;
+      justify-content: space-between;
+      flex-direction: row;
+    }
   }
 
   &__author {
@@ -60,6 +89,11 @@
     flex-direction: column;
     width: 10rem;
     gap: 1rem;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
   }
 
   &__views-grand-child-container {
@@ -67,6 +101,9 @@
     flex-direction: row;
     gap: 1rem;
     padding-left: 3rem;
+    @include tablet {
+      padding: 0;
+    }
   }
   // &__view-image
   &__view-count {
@@ -80,5 +117,8 @@
   }
   &__summary-info {
     margin: 1rem;
+    @include tablet {
+      margin: 1rem 2rem 1rem 2rem;
+    }
   }
 }

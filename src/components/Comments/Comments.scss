@@ -3,15 +3,28 @@
 @use "../../styles/partials/typography" as *;
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "AvenirNextLTPro", sans-serif;
-  //   border: 1px solid red;
+  line-height: 1.5rem;
+  color: $brainflix-black;
+}
+
+.comments__wrapper {
+  @include desktop {
+    margin-left: 8rem;
+    width: 80%;
+    border-right: 1px solid $mercury;
+  }
 }
 
 .comments {
   margin: 1rem;
+  @include tablet {
+    margin: 0rem 2rem 0rem 2rem;
+  }
+  @include desktop {
+    // padding-right: 2rem;
+    margin: 0rem 0rem 0rem 2rem;
+  }
+
   //   &__counter
   &__add-container {
     display: flex;
@@ -40,9 +53,18 @@
     width: 100%;
     margin-left: 1rem;
   }
+
   &__subheading {
     color: $silver;
     margin-bottom: 0.5rem;
+  }
+
+  &__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
   }
 
   &__form {
@@ -51,7 +73,15 @@
     background-color: $alabaster;
     border: 1px solid $mercury;
     height: 2.5rem;
+    padding-left: 1rem;
     margin-bottom: 1rem;
+    margin-left: 0.25rem;
+    color: $brainflix-black;
+    background-color: $alabaster;
+    @include tablet {
+      width: 200%;
+      min-height: 2.5rem;
+    }
   }
   &__button {
     background-color: $brainflix-blue;
@@ -60,6 +90,15 @@
     height: 2.5rem;
     display: flex;
     justify-content: center;
+    @include tablet {
+      margin-left: 1rem;
+    }
+    @include desktop {
+      margin-right: 1rem;
+    }
+    &:hover {
+      background-color: $brainflix-darkblue;
+    }
   }
 
   &__button-image {
@@ -110,8 +149,14 @@
   }
   &__posted-date {
     color: $silver;
+    @include desktop {
+      margin-right: 1rem;
+    }
   }
   &__posted-text {
     margin-left: 1rem;
+    @include desktop {
+      margin-right: 1rem;
+    }
   }
 }

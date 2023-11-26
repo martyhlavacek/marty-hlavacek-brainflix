@@ -14,7 +14,7 @@ function Header() {
               src="../src/assets/images/search.svg"
               className="header__search-logo"
             ></img>
-            <input className="header__search-form" placeholder="search"></input>
+            <input className="header__search-form" placeholder="Search"></input>
           </form>
           <img
             src="../src/assets/images/Mohan-muruge.jpg"
@@ -28,6 +28,10 @@ function Header() {
           ></img>
           <p className="header__upload-text">UPLOAD</p>
         </div>
+        <img
+          src="../src/assets/images/Mohan-muruge.jpg"
+          className="header__avatar--deskop-tablet"
+        ></img>
       </section>
     </>
   );
