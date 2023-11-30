@@ -1,9 +1,7 @@
 import "./Comments.scss";
 
 function Comments(props) {
-  // Check if activeVideo and activeVideo.comments are available
   if (!props.activeVideo || !props.activeVideo.comments) {
-    // Render a message or a loading indicator if the data is not yet available
     return <p className="comments__loading-text">Loading comments...</p>;
   }
 
