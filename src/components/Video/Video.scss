@@ -4,6 +4,10 @@
 
 .video {
   margin: 0rem;
+  &__loading-text {
+    text-align: center;
+    margin: 0;
+  }
 
   &__inline-player-container {
     margin-top: 1rem;

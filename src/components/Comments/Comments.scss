@@ -25,7 +25,11 @@
     margin: 0rem 0rem 0rem 2rem;
   }
 
-  //   &__counter
+  &__loading-text {
+    text-align: center;
+    margin: 0;
+  }
+
   &__add-container {
     display: flex;
     justify-content: space-between;

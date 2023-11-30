@@ -1,11 +1,13 @@
 import "./Comments.scss";
 
 function Comments(props) {
-  {
-    props.activeVideo.comments;
+  // Check if activeVideo and activeVideo.comments are available
+  if (!props.activeVideo || !props.activeVideo.comments) {
+    // Render a message or a loading indicator if the data is not yet available
+    return <p className="comments__loading-text">Loading comments...</p>;
   }
 
-  console.log(props.activeVideo.comments);
+  // console.log("props.activeVideo.comments", props.activeVideo.comments);
 
   return (
     <>
@@ -68,9 +70,9 @@ function Comments(props) {
               </div>
             </div>
           </div>
-          {props.activeVideo.comments.map((comment) => {
+          {props.activeVideo.comments.map((comment, index) => {
             return (
-              <div className="comments__posted-container">
+              <div key={index} className="comments__posted-container">
                 <div className="comments__posted-avatar-container">
                   <img
                     src="https://placehold.co/1200x798"
