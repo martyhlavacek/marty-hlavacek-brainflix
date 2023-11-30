@@ -1,7 +1,7 @@
 import "./Video.scss";
 
-function Video(props) {
-  if (!props.activeVideo) {
+function Video({ activeVideo }) {
+  if (!activeVideo) {
     return <p className="video__loading-text">Loading video...</p>;
   }
 
@@ -11,9 +11,9 @@ function Video(props) {
         <div className="video__inline-player-container">
           <video
             className="video__inline-player"
-            src={props.activeVideo.image}
+            src={activeVideo.image}
             controls
-            poster={props.activeVideo.image}
+            poster={activeVideo.image}
           ></video>
         </div>
       </section>

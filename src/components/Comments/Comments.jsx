@@ -1,24 +1,20 @@
 import "./Comments.scss";
 
-function Comments(props) {
-  if (!props.activeVideo || !props.activeVideo.comments) {
+function Comments({ activeVideo }) {
+  if (!activeVideo || !activeVideo.comments) {
     return <p className="comments__loading-text">Loading comments...</p>;
   }
-
-  // console.log("props.activeVideo.comments", props.activeVideo.comments);
 
   return (
     <>
       <div className="comments__wrapper">
-        <h1 className="video__main-text">{props.activeVideo.title}</h1>
+        <h1 className="video__main-text">{activeVideo.title}</h1>
         <div className="video__data-container">
           <div className="video__credits-container">
-            <p className="video__author">By {props.activeVideo.channel}</p>
+            <p className="video__author">By {activeVideo.channel}</p>
             <p className="video__date-posted">
               {" "}
-              {new Date(props.activeVideo.timestamp).toLocaleDateString(
-                "en-US"
-              )}
+              {new Date(activeVideo.timestamp).toLocaleDateString("en-US")}
             </p>
           </div>
           <div className="video__metrics-container">
@@ -28,22 +24,22 @@ function Comments(props) {
                   src="../../src/assets/images/views.svg"
                   className="video__view-image"
                 ></img>
-                <p className="video__view-count">{props.activeVideo.views}</p>
+                <p className="video__view-count">{activeVideo.views}</p>
               </div>
               <div className="video__views-grand-child-container">
                 <img
                   src="../../src/assets/images/likes.svg"
                   className="video__like-image"
                 ></img>
-                <p className="video__like-count">{props.activeVideo.likes}</p>
+                <p className="video__like-count">{activeVideo.likes}</p>
               </div>
             </div>
           </div>
         </div>
-        <p className="video__summary-info">{props.activeVideo.description}</p>
+        <p className="video__summary-info">{activeVideo.description}</p>
         <section className="comments">
           <p className="comments__counter">
-            {props.activeVideo.comments.length} Comments
+            {activeVideo.comments.length} Comments
           </p>
           <div className="comments__add-container">
             <div className="comments__avatar-container">
@@ -68,7 +64,7 @@ function Comments(props) {
               </div>
             </div>
           </div>
-          {props.activeVideo.comments.map((comment, index) => {
+          {activeVideo.comments.map((comment, index) => {
             return (
               <div key={index} className="comments__posted-container">
                 <div className="comments__posted-avatar-container">

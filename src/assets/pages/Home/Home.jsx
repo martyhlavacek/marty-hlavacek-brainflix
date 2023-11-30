@@ -8,8 +8,12 @@ import axios from "axios";
 
 function Home() {
   const { videoId } = useParams();
+
+  // useParams is key to being able to interact with the React Router DOM, the videoId variable helps to define the URL path that gets fed to the Router located in the app.jsx
+
   const [videos, setVideos] = useState([]);
   const [activeVideo, setActiveVideo] = useState();
+
   const nonActiveVideos = videos.filter(
     (video) => video.id !== activeVideo?.id
   );

@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Gallery.scss";
 
-function Gallery(props) {
+function Gallery({ nonActiveVideos }) {
   return (
     <section className="gallery">
       <h5 className="gallery__subheading">NEXT VIDEOS</h5>
-      {props.nonActiveVideos.map((video) => {
+      {nonActiveVideos.map((video) => {
         return (
           <Link
             to={`/videos/${video.id}`}

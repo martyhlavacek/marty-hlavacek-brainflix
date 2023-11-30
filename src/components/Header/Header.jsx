@@ -1,13 +1,16 @@
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <>
       <section className="header">
-        <img
-          src="../src/assets/images/BrainFlix-logo.svg"
-          className="header__logo"
-        ></img>
+        <Link to="/home">
+          <img
+            src="../src/assets/images/BrainFlix-logo.svg"
+            className="header__logo"
+          ></img>
+        </Link>
         <div className="header__search-bar-container">
           <form className="header__search-bar">
             <img
