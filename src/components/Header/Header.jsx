@@ -24,13 +24,15 @@ function Header() {
             className="header__avatar"
           ></img>
         </div>
-        <div className="header__button">
-          <img
-            src="../src/assets/images/upload.svg"
-            className="header__upload-logo"
-          ></img>
-          <p className="header__upload-text">UPLOAD</p>
-        </div>
+        <Link to="/upload">
+          <div className="header__button">
+            <img
+              src="../src/assets/images/upload.svg"
+              className="header__upload-logo"
+            ></img>
+            <p className="header__upload-text">UPLOAD</p>
+          </div>
+        </Link>
         <img
           src="../src/assets/images/Mohan-muruge.jpg"
           className="header__avatar--deskop-tablet"
