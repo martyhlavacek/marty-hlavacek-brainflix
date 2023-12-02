@@ -1,10 +1,12 @@
 import "./Comments.scss";
 
 function Comments({ activeVideo }) {
-  if (!activeVideo || !activeVideo.comments) {
-    return <p className="comments__loading-text">Loading comments...</p>;
-  } else
-    return (
+  // if (!activeVideo || !activeVideo.comments) {
+  //   return <p className="comments__loading-text">Loading comments...</p>;
+  // } else
+  //   return (
+  return (
+    activeVideo && (
       <>
         <div className="comments__wrapper">
           <h1 className="video__main-text">{activeVideo.title}</h1>
@@ -67,10 +69,7 @@ function Comments({ activeVideo }) {
               return (
                 <div key={index} className="comments__posted-container">
                   <div className="comments__posted-avatar-container">
-                    <img
-                      src="https://placehold.co/1200x798"
-                      className="comments__posted-avatar-image"
-                    ></img>
+                    <div className="comments__posted-avatar-image"></div>
                   </div>
                   <div className="comments__posted-credits-container">
                     <div className="comments__posted-credits-child-container">
@@ -91,7 +90,8 @@ function Comments({ activeVideo }) {
           </section>
         </div>
       </>
-    );
+    )
+  );
 }
 
 export default Comments;

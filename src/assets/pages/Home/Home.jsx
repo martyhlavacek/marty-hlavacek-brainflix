@@ -32,6 +32,7 @@ function Home() {
           );
           setActiveVideo(videoDetailsResponse.data);
         }
+        // this piece of code above needs to be moved to the useEffect fetchvideo below as semantically the logic is in the wrong place
       } catch (error) {
         console.error("Error fetching videos:", error);
       }

@@ -1,10 +1,13 @@
 import "./Video.scss";
 
 function Video({ activeVideo }) {
-  if (!activeVideo) {
-    return <p className="video__loading-text">Loading video...</p>;
-  } else
-    return (
+  // if (!activeVideo) {
+  //   return <p className="video__loading-text">Loading video...</p>;
+  // } else
+  // return (
+
+  return (
+    activeVideo && (
       <>
         <section className="video">
           <div className="video__inline-player-container">
@@ -17,7 +20,8 @@ function Video({ activeVideo }) {
           </div>
         </section>
       </>
-    );
+    )
+  );
 }
 
 export default Video;

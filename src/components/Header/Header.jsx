@@ -5,7 +5,7 @@ function Header() {
   return (
     <>
       <section className="header">
-        <Link to="/home">
+        <Link className="header__logo-link" to="/home">
           <img
             src="../src/assets/images/BrainFlix-logo.svg"
             className="header__logo"
@@ -24,7 +24,7 @@ function Header() {
             className="header__avatar"
           ></img>
         </div>
-        <Link to="/upload">
+        <Link className="header__button-link-container" to="/upload">
           <div className="header__button">
             <img
               src="../src/assets/images/upload.svg"
