@@ -14,16 +14,20 @@ function Upload() {
               className="upload__video-image"
             />
           </article>
-          <article className="upload__video-form-container">
+          <form className="upload__video-form-container">
             <h5 className="upload__video-subheading">VIDEO THUMBNAIL</h5>
-            <form className="upload__form">Add a title to your video</form>
+            <input
+              className="upload__form"
+              placeholder="Add a title to your video"
+            ></input>
             <h5 className="upload__video-subheading">
-              ADD A VIDEO DESCRIPTION{" "}
+              ADD A VIDEO DESCRIPTION
             </h5>
-            <form className="upload__form">
-              Add a description to your video
-            </form>
-          </article>
+            <input
+              className="upload__form-description"
+              placeholder="Add a description to your video"
+            ></input>
+          </form>
         </div>
         <div className="upload__button-container">
           <div className="upload__button">
@@ -33,8 +37,15 @@ function Upload() {
             ></img>
             <p className="upload__button-text">PUBLISH</p>
           </div>
-          <div className="upload__button--cancel">
-            <p className="upload__button-text--cancel">CANCEL</p>
+          <div className="upload__button-cancel">
+            <p className="upload__button-text-cancel">CANCEL</p>
+          </div>
+          <div className="upload__button--tablet-desktop">
+            <img
+              src="../src/assets/images/publish.svg"
+              className="upload__publish-logo--tablet-desktop"
+            ></img>
+            <p className="upload__button-text--tablet-desktop">PUBLISH</p>
           </div>
         </div>
       </div>

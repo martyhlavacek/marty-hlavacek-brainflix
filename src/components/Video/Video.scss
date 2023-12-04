@@ -25,6 +25,7 @@
       margin: 0rem 15rem 0 15rem;
     }
   }
+
   &__main-text {
     margin: 1rem;
     line-height: 2rem;
@@ -33,6 +34,7 @@
       font-size: xx-large;
     }
   }
+
   &__data-container {
     display: flex;
     flex-direction: row;
@@ -84,6 +86,7 @@
     font-weight: 600;
     color: $brainflix-black;
   }
+
   &__date-posted {
     color: $silver;
   }
@@ -109,16 +112,17 @@
       padding: 0;
     }
   }
-  // &__view-image
+
   &__view-count {
     display: flex;
     width: fit-content;
     color: $silver;
   }
-  // &__like-image
+
   &__like-count {
     color: $silver;
   }
+
   &__summary-info {
     margin: 1rem;
     @include tablet {

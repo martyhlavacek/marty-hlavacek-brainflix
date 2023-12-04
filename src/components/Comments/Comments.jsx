@@ -1,10 +1,6 @@
 import "./Comments.scss";
 
 function Comments({ activeVideo }) {
-  // if (!activeVideo || !activeVideo.comments) {
-  //   return <p className="comments__loading-text">Loading comments...</p>;
-  // } else
-  //   return (
   return (
     activeVideo && (
       <>
@@ -52,8 +48,11 @@ function Comments({ activeVideo }) {
               </div>
               <div className="comments__form-container">
                 <h5 className="comments__subheading">JOIN THE CONVERSATION</h5>
-                <div className="comments__form-wrapper">
-                  <form className="comments__form">Add a new comment</form>
+                <form className="comments__form-wrapper">
+                  <input
+                    className="comments__form"
+                    placeholder="Add a new comment"
+                  ></input>
                   <div className="comments__button">
                     <img
                       src="../../src/assets/images/add_comment.svg"
@@ -62,7 +61,7 @@ function Comments({ activeVideo }) {
                     />
                     <p className="comments__button-text">COMMENT</p>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
             {activeVideo.comments.map((comment, index) => {
