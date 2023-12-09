@@ -15,7 +15,7 @@ function Upload() {
             />
           </article>
           <form className="upload__video-form-container">
-            <h5 className="upload__video-subheading">VIDEO THUMBNAIL</h5>
+            <h5 className="upload__video-subheading">ADD A VIDEO TITLE</h5>
             <input
               className="upload__form"
               placeholder="Add a title to your video"
