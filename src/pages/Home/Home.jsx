@@ -1,7 +1,7 @@
 import "./Home.scss";
-import Video from "../../../components/Video/Video.jsx";
-import Comments from "../../../components/Comments/Comments.jsx";
-import Gallery from "../../../components/Gallery/Gallery.jsx";
+import Video from "../../components/Video/Video.jsx";
+import Comments from "../../components/Comments/Comments.jsx";
+import Gallery from "../../components/Gallery/Gallery.jsx";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";

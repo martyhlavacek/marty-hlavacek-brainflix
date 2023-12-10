@@ -2,8 +2,8 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 import { BrowserRouter, Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
-import Home from "./assets/pages/Home/Home";
-import Upload from "./assets/pages/Upload/Upload";
+import Home from "./pages/Home/Home.jsx";
+import Upload from "./pages/Upload/Upload.jsx";
 
 function App() {
   return (
