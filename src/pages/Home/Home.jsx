@@ -1,7 +1,7 @@
 import "./Home.scss";
-import Video from "../../../components/Video/Video.jsx";
-import Comments from "../../../components/Comments/Comments.jsx";
-import Gallery from "../../../components/Gallery/Gallery.jsx";
+import Video from "../../components/Video/Video.jsx";
+import Comments from "../../components/Comments/Comments.jsx";
+import Gallery from "../../components/Gallery/Gallery.jsx";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -20,7 +20,7 @@ function Home() {
     const fetchVideos = async () => {
       try {
         const response = await axios.get(
-          "https://project-2-api.herokuapp.com/videos?api_key=%225d0f98d8-23d6-4ec7-a536-72579a5dc3ff%22" // this URL and corresponding API key has been hardcoded and in future iterations will need to be moved to a more secure method
+          "http://localhost:8080/videos/" // this URL and corresponding API key has been hardcoded and in future iterations will need to be moved to a more secure method
         );
         setVideos(response.data);
       } catch (error) {
@@ -34,9 +34,7 @@ function Home() {
   useEffect(() => {
     const fetchVideo = async (id) => {
       try {
-        const response = await axios.get(
-          `https://project-2-api.herokuapp.com/videos/${id}?api_key=%225d0f98d8-23d6-4ec7-a536-72579a5dc3ff%22`
-        ); // say as per comment on line 23
+        const response = await axios.get(`http://localhost:8080/videos/${id}`); // say as per comment on line 23
         setActiveVideo(response.data);
       } catch (error) {
         console.error("Error fetching video details:", error);
